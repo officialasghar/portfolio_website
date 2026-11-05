@@ -1,0 +1,9 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: asghar-portfolio:latest
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
