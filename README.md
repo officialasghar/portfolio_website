@@ -4,7 +4,7 @@
 
 ```powershell
 docker build -t asghar-portfolio .
-docker run --rm -p 3000:3000 asghar-portfolio
+docker run --rm -p 8000:3000 asghar-portfolio
 ```
 
 Or use Docker Compose:
