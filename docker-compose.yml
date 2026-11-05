@@ -1,31 +1,9 @@
-
-name: Deploy Portfolio
-
-on:
-  push:
-    branches:
-      - master
-  workflow_dispatch:
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Deploy to Ubuntu VPS
-        uses: appleboy/ssh-action@v1.2.2
-        with:
-          host: ${{ secrets.DEPLOY_HOST }}
-          username: ${{ secrets.DEPLOY_USER }}
-          key: ${{ secrets.DEPLOY_SSH_KEY }}
-          port: ${{ secrets.DEPLOY_PORT || '22' }}
-          script: |
-            set -e
-
-            cd /home/ubuntu/portfolio_website
-
-            git pull --ff-only origin master
-
-            docker compose up -d --build --remove-orphans
-
-            docker image prune -f
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: asghar-portfolio:latest
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
