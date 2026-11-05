@@ -5,5 +5,5 @@ services:
       dockerfile: Dockerfile
     image: asghar-portfolio:latest
     ports:
-      - "8000:3000"
+      - "8000:8000"
     restart: unless-stopped
