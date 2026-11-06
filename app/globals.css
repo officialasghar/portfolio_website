@@ -82,6 +82,16 @@ em { font-family:"Playfair Display",serif; font-weight:600; }
 .contact h2 { font-size:clamp(52px,7vw,92px);line-height:.95;letter-spacing:-.06em;max-width:950px;margin:0 auto 25px;}
 .contact h2 em{display:block}.contact p{max-width:570px;margin:0 auto 30px;color:#4e5b38;}
 .contact .button { margin:0 auto; }
+.contact-form { max-width:760px; margin:45px auto 0; padding:30px; text-align:left; background:var(--paper); border:1px solid var(--ink); box-shadow:10px 10px 0 rgba(17,29,27,.12); }
+.contact-form label { display:flex; flex-direction:column; gap:9px; font-family:"DM Mono",monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
+.contact-form input,.contact-form textarea { width:100%; border:1px solid var(--line); border-radius:0; padding:14px; background:#fff; color:var(--ink); font:14px "Manrope",sans-serif; outline:none; }
+.contact-form input:focus,.contact-form textarea:focus { border-color:#7d9500; box-shadow:0 0 0 2px rgba(125,149,0,.12); }
+.contact-form textarea { min-height:130px; resize:vertical; }
+.contact-form > .button { margin-top:18px; border:0; cursor:pointer; }
+.contact-form > .button:disabled { cursor:wait; opacity:.7; }
+.form-result { margin:18px 0 0; font-size:13px; font-weight:700; }
+.form-result.error { color:#a22; }
 footer { height:110px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;background:var(--ink);color:#fff;font-size:11px;}
 footer p { margin:0;color:#8d9896;}footer div{display:flex;gap:24px;}
 
@@ -95,5 +105,6 @@ footer p { margin:0;color:#8d9896;}footer div{display:flex;gap:24px;}
   .hero-art{min-height:470px}.portrait{width:250px;height:330px}.floating-card{transform:scale(.85)}
   .section{padding:75px 20px}.about h2,.skills h2,.projects h2{font-size:46px}.about-stats{gap:8px}.skill-grid,.project-grid{grid-template-columns:1fr}
   .experience-card{gap:25px}.project-card{min-height:330px}.contact{padding:90px 20px}.contact h2{font-size:50px}
+  .contact-form{padding:20px}.form-row{grid-template-columns:1fr}
   footer{height:auto;padding:35px 20px;gap:25px;flex-direction:column;text-align:center}
 }

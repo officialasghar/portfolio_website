@@ -1,3 +1,5 @@
+import ContactForm from "./ContactForm";
+
 export default function Home() {
   const skills = [
     ["AI & Agents", "Generative AI", "LangChain", "LangGraph", "RAG", "Prompt Engineering"],
@@ -200,13 +202,18 @@ export default function Home() {
         <div className="section-label">05 / CONTACT</div>
         <h2>Let&apos;s build something <em>intelligent.</em></h2>
         <p>Have an AI product idea, automation challenge, or opportunity to collaborate?</p>
-        <a className="button button-primary" href="mailto:hello@asghar.online">Get in touch <b>↗</b></a>
+        <ContactForm />
       </section>
 
       <footer>
         <a className="brand" href="#home">AS<span>.</span></a>
         <p>© 2026 Asghar Asad. Built with passion for AI and intelligent systems.</p>
-        <div><a href="https://asghar.online">Website</a><a href="https://github.com">GitHub</a><a href="https://linkedin.com">LinkedIn</a></div>
+        <div>
+          <a href="https://asghar.online">Website</a>
+          <a href="mailto:official.masghar@gmail.com">Email</a>
+          <a href="https://github.com">GitHub</a>
+          <a href="https://linkedin.com">LinkedIn</a>
+        </div>
       </footer>
     </main>
   );
